@@ -1,14 +1,14 @@
 i3-configs
 ==========
 
-These configuration files are for the popular X11 tilling window manager i3. 
+These configuration files are for the popular X11 tilling window manager, i3. 
 
 [This](http://www.reddit.com/r/unixporn/comments/1cvsgv/archi3_finally_done_setting_up_my_conky_i3status/) is how this configuration should look.
 
 The Files
 ---------
 
-* .i3/config - the main i3 config file containing keybindings and colours for windows.
+* .i3/config - the main i3 config file containing key bindings and colours for windows.
 * .i3/conky - tells conky what config to use gives version.
 * .i3/conkyrc - the conky config for i3status.
 
@@ -21,9 +21,9 @@ The Files
 Installation
 ------------
 
-If you'd like to install this, clone the repo and move everything to the appriate places. Make sure you have everything that's needed installed.
+If you'd like to install this, clone the repo and move everything to the appropriate places. Make sure you have everything that's needed installed.
 
-My own .xinitrc file contails simply "exec i3". 
+My own .xinitrc file contains simply "exec i3". 
 
 Make sure feh is installed and set your wallpaper for the first time with "feh --bg-fill /path/to/file". This will create ~/.fehbg which i3 will run upon startup. .fehbg will automatically update whenever you run feh to change the wallpaper again.
 
@@ -32,9 +32,9 @@ I've used GTK themes (Siva Flat and used Faenza icon theme, both of which can be
 Credits
 -------
 
-The base configration was taken from [here](https://github.com/ivyl/i3-config).
+The base configuration was taken from [here](https://github.com/ivyl/i3-config).
 
 Other
 -----
 
-That's all. Hopefully I didn't miss anything! If you try this out and it doesn't look like the example above, something's maybe not installed, needs cusotimized for your system or I forgot to include a file.
+That's all. Hopefully I didn't miss anything! If you try this out and it doesn't look like the example above, something's maybe not installed, needs customized for your system or I forgot to include a file.
