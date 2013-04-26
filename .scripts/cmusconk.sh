@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Use cmus-remote to find the artist's name and keep it as a string;
-ARTIST=$( cmus-remote -Q 2>/dev/null | grep artist | cut -d " " -f 3- )
+ARTIST=$( cmus-remote -Q 2>/dev/null | grep artist -w | cut -d " " -f 3- )
 #Use cmus-remote to find the title and keep it as a string;
 TITLE=$( cmus-remote -Q 2>/dev/null | grep title | cut -d " " -f 3- )
 
