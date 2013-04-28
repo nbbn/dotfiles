@@ -93,6 +93,8 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10: Daemons
+#"Daemons" is intended for things like aria or recordmydesktop which you want away from other stuff.
+
 
 # move focused container to workspace
 bindsym $mod+Shift+exclam move container to workspace 1
