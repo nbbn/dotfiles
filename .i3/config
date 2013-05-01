@@ -145,8 +145,8 @@ bar {
         colors { 
                 statusline #AAAAAA
                 background #333333
-                focused_workspace $gray2 $gray2 #FFFFFF
-                inactive_workspace $gray1 $gray1 #AAAAAA
+                focused_workspace #333333 #333333 #FFFFFF
+                inactive_workspace #484848 #484848 #AAAAAA
         }
 }
 
