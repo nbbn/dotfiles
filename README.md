@@ -3,7 +3,8 @@ i3-configs
 
 These configuration files are for the popular X11 tilling window manager, i3. 
 
-[This](http://www.reddit.com/r/unixporn/comments/1cvsgv/archi3_finally_done_setting_up_my_conky_i3status/) is how this configuration should look.
+[This](http://www.reddit.com/r/unixporn/comments/1cvsgv/archi3_finally_done_setting_up_my_conky_i3status/) is how this configuration should look. (note, there have been a few changes since then. You'll have to download or check commits to see what they are.)
+
 
 The Files
 ---------
