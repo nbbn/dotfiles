@@ -24,10 +24,10 @@ bindsym $mod+Shift+Return exec urxvt
 bindsym Print exec scrot -e 'mv $f /home/matthew/Pictures/Screenshots'
 
 # sound shortcuts
-bindsym XF86AudioPlay exec cmus-remote -u
-bindsym XF86AudioStop exec cmus-remote -s
-bindsym XF86AudioNext exec cmus-remote -n
-bindsym XF86AudioPrev exec cmus-remote -r
+bindsym XF86AudioPlay exec ~/.scripts/audiocontrols.sh play
+bindsym XF86AudioStop exec ~/.scripts/audiocontrols.sh stop 
+bindsym XF86AudioNext exec ~/.scripts/audiocontrols.sh next
+bindsym XF86AudioPrev exec ~/.scripts/audiocontrols.sh stop
 bindsym XF86Tools exec gnome-terminal -x sh -c "cmus"
 bindsym XF86AudioRaiseVolume exec amixer set Master 3+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 3- unmute
@@ -159,5 +159,4 @@ exec gnome-keyring-daemon
 exec dropboxd
 
 for_window [title="synapse"] border none
-
-
+for_window [class="Audacious"] floating enable
