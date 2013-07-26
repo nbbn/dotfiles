@@ -21,7 +21,7 @@ floating_modifier $mod
 bindsym $mod+Return exec gnome-terminal
 bindsym XF86Explorer exec gnome-terminal
 bindsym $mod+Shift+Return exec urxvt
-bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
+bindsym Print exec scrot -q 100 -e 'mv $f ~/Pictures/Screenshots'
 
 # sound shortcuts
 bindsym XF86AudioPlay exec ~/.scripts/audiocontrols.sh play
@@ -106,7 +106,7 @@ bindsym $mod+Shift+percent move container to workspace 5
 bindsym $mod+Shift+asciicircum move container to workspace 6
 bindsym $mod+Shift+ampersand move container to workspace 7
 bindsym $mod+Shift+asterisk move container to workspace 8
-bindsym $mod+Shift+parenleft move container to workspace 9: Musc+etc
+bindsym $mod+Shift+parenleft move container to workspace 9: Music+etc
 bindsym $mod+Shift+parenright move container to workspace 10: IRC+Chat
 bindsym $mod+Shift+underscore move container to workspace 11: Daemons
 
