@@ -34,7 +34,7 @@ bindsym XF86AudioLowerVolume exec amixer set Master 3- unmute
 bindsym XF86AudioMute exec amixer set Master mute
 
 # lock scren
-bindsym XF86Calculator exec i3lock -c 1C1C1C
+bindsym XF86Calculator exec cinnamon-screensaver-command -l
 
 # start browser
 bindsym $mod+c exec $browser
@@ -86,7 +86,7 @@ bindsym $mod+Shift+f floating toggle
 # change focus between tiling / floating windows
 
 # switch to workspace
-bindsym $mod+1 workspace 1
+bindsym $mod+1 workspace 1: Home
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
@@ -94,11 +94,11 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10: Daemons
+bindsym $mod+9 workspace 9: Music+etc
+bindsym $mod+0 workspace 10: IRC+Chat
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace 1
+bindsym $mod+Shift+exclam move container to workspace 1: Home
 bindsym $mod+Shift+quotedbl move container to workspace 2
 bindsym $mod+Shift+sterling move container to workspace 3
 bindsym $mod+Shift+dollar move container to workspace 4
@@ -106,8 +106,9 @@ bindsym $mod+Shift+percent move container to workspace 5
 bindsym $mod+Shift+asciicircum move container to workspace 6
 bindsym $mod+Shift+ampersand move container to workspace 7
 bindsym $mod+Shift+asterisk move container to workspace 8
-bindsym $mod+Shift+parenleft move container to workspace 9
-bindsym $mod+Shift+parenright move container to workspace 10: Daemons
+bindsym $mod+Shift+parenleft move container to workspace 9: Musc+etc
+bindsym $mod+Shift+parenright move container to workspace 10: IRC+Chat
+bindsym $mod+Shift+underscore move container to workspace 11: Daemons
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -156,7 +157,7 @@ bar {
 exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id /bin/sh ~/.fehbg
 exec gnome-keyring-daemon
-exec dropboxd
+exec dropbox start
 
 for_window [title="synapse"] border none
 for_window [class="Audacious"] floating enable
