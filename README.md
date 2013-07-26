@@ -1,7 +1,7 @@
 i3-configs
 ==========
 
-![Screenshot](http://northantrim.org/img/siemooti.png?raw=true "Sreenshot")
+[Screenshot](http://northantrim.org/img/siemooti.png)
 
 These configuration files are for the popular X11 tilling window manager, i3. 
 
