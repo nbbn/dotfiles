@@ -21,7 +21,7 @@ floating_modifier $mod
 bindsym $mod+Return exec gnome-terminal
 bindsym XF86Explorer exec gnome-terminal
 bindsym $mod+Shift+Return exec urxvt
-bindsym Print exec scrot -e 'mv $f /home/matthew/Pictures/Screenshots'
+bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
 
 # sound shortcuts
 bindsym XF86AudioPlay exec ~/.scripts/audiocontrols.sh play
@@ -33,7 +33,7 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 3+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 3- unmute
 bindsym XF86AudioMute exec amixer set Master mute
 
-# lock scren
+# lock screen using cinnamon's screen lock
 bindsym XF86Calculator exec cinnamon-screensaver-command -l
 
 # start browser
