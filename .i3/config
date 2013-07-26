@@ -5,8 +5,8 @@ new_window pixel 2
 focus_follows_mouse  yes
 
 set $blue #005588
-set $gray1 #9933CC
-set $gray2 #AA66CC
+set $gray1 #4F305E
+set $gray2 #333333
 
 set $browser firefox
 
