@@ -22,6 +22,8 @@ TEXT
   {"full_text": " ▼ [${downspeed}] ", "color":"\#00fff2"},
 #Shows current memory usage with a bar
   {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
+#Shows current CPU usage with a bar
+  {"full_text": " ■ [$cpubar] ", "color":"\#00A9B5"},
 #Shows temperature of GPU. Only works with NVIDIA cards with the proprietary drivers installed. Could be replaced with a lm-sensors-provided temperature
   {"full_text": " ≈ [${exec nvidia-settings -q gpucoretemp -t}°C] ","color":"\#33CC99"},
 #Shows upime
