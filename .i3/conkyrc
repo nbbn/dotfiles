@@ -10,14 +10,24 @@ override_utf8_locale yes
 
 TEXT
 ,[
+#Finds out if cmus is running. If it is, it provides 1) the current artist and 2) the current track. If cmus isn't running it outputs "Not Running"
   {"full_text": " [${exec sh .scripts/cmusconk.sh}] ", "color":"\#e4f800"},
+#Finds current volume. May need modified depending on your setup
   {"full_text": " ♪ ${exec amixer get Master | grep -o "\[.*%\]"} ", "color":"\#268BD2"},
+#Shows current user
   {"full_text": " ☻ [${exec whoami}] ", "color":"\#ff00f3"},
+#Shows uploadspeed
   {"full_text": " ▲ [${upspeed}] ", "color":"\#ff0000"},
+#Shows downloadspeed
   {"full_text": " ▼ [${downspeed}] ", "color":"\#00fff2"},
+#Shows current memory usage with a bar
   {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
+#Shows temperature of GPU. Only works with NVIDIA cards with the proprietary drivers installed. Could be replaced with a lm-sensors-provided temperature
   {"full_text": " ≈ [${exec nvidia-settings -q gpucoretemp -t}°C] ","color":"\#33CC99"},
+#Shows upime
   {"full_text": " ↑ [${uptime}] ","color": "\#dc322f"},
+#Shows time
   {"full_text": " [${time %a %d %b} ${time %H:%M:%S}] ","color": "\#2fdc57"}
 ]
 
+#See 
