@@ -1,7 +1,8 @@
 i3-configs
 ==========
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.png) 
+(note: I rarely have floating windows besides popups/save dialogs etcetera. This window is floating to show my wallpaper and also to show window borders)
 
 These configuration files are for the popular X11 tilling window manager, i3. 
 
