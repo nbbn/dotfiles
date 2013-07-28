@@ -44,7 +44,7 @@ bindsym XF86HomePage exec $browser
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb black
+bindsym $mod+d exec dmenu_run -nb black -nf white
 
 # screen lock
 bindsym Control+$mod+l exec slimlock
