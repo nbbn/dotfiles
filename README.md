@@ -16,7 +16,7 @@ The Files
 * .i3/conkyrc - the conky config for i3status.
 
 * .scripts/cmusconk.sh - used to display current cmus track in i3status.
-* .scripts/vol.sh - used to get volume percentage for i3status. May need to customize for your own setup. Allows for things like changing [0%] -> [MUTE] with simple if statement.
+* ~~.scripts/vol.sh - used to get volume percentage for i3status. May need to customize for your own setup. Allows for things like changing [0%] -> [MUTE] with simple if statement.~~ Reduntant. Although the current setup will show [0%] instead of [MUTE], it is now much smaller and runs within conky.
 
 Installation
 ------------
