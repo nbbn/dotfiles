@@ -21,7 +21,7 @@ TEXT
 #Shows downloadspeed
   {"full_text": " ▼ [${downspeed}] ", "color":"\#00fff2"},
 #Shows current memory usage with a bar
-  {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
+  {"full_text": " || [$membar] ", "color":"\#B58900"},
 #Shows current CPU usage with a bar
   {"full_text": " ■ [$cpubar] ", "color":"\#00A9B5"},
 #Bar showing available entropy. Install haveged if you want this to rocket up. Without, /proc/sys/kernel/random/entropy_avail reported on my sysem ~175. With, it reported ~3585
