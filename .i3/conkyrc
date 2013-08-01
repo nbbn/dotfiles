@@ -16,6 +16,8 @@ TEXT
   {"full_text": " ♪ ${exec amixer get Master | grep -o "\[.*%\]"} ", "color":"\#268BD2"},
 #Shows current user
   {"full_text": " ☻ [${exec whoami}] ", "color":"\#ff00f3"},
+#Shows hostname
+  {"full_text": " ♥ [${exec hostname}] ", "color":"\#6F3BFF"},
 #Shows uploadspeed
   {"full_text": " ▲ [${upspeed}] ", "color":"\#ff0000"},
 #Shows downloadspeed
