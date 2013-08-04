@@ -144,7 +144,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-        position top
+        position bottom
         status_command ~/.i3/conky
         colors { 
                 statusline #AAAAAA
