@@ -21,7 +21,7 @@ floating_modifier $mod
 bindsym $mod+Return exec gnome-terminal
 bindsym XF86Explorer exec gnome-terminal
 bindsym $mod+Shift+Return exec urxvt
-bindsym Print exec scrot -q 100 -e 'mv $f ~/Pictures/Screenshots'
+bindsym Print exec scrot -q 100 -e 'mv $f ~/Pictures'
 
 # sound shortcuts
 bindsym XF86AudioPlay exec ~/.scripts/audiocontrols.sh play
