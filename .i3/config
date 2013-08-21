@@ -18,7 +18,7 @@ client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec mate-terminal
 bindsym XF86Explorer exec gnome-terminal
 bindsym $mod+Shift+Return exec urxvt
 bindsym Print exec scrot -q 100 -e 'mv $f ~/Pictures'
