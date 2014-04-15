@@ -1,6 +1,9 @@
 i3-config
 ==========
 
+**note: I am using Cinnamon again, so this repo will probably not be updated for a while.**
+
+
 ![Screenshot](screenshot.png) 
 <sup>(note: I rarely have floating windows besides popups/save dialogs etcetera. This window is floating to show my wallpaper and also to show window borders)</sup>
 
