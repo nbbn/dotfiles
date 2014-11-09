@@ -1,7 +1,4 @@
-
-
-
-
+# i3 config file
 set                            $mod Mod4
 font                           pango:Consolas 9
 bindsym $mod+Return            exec i3-sensible-terminal
@@ -83,9 +80,9 @@ bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+7 workspace 7 ssh
+bindsym $mod+8 workspace 8 mail
+bindsym $mod+9 workspace 9 music
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace

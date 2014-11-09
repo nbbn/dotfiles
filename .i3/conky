@@ -9,11 +9,8 @@ pad_percents	  3
 override_utf8_locale yes
 TEXT
 [
-#{"full_text": " [${exec sh /home/js/.i3/./cmus.sh}] ", "color":"\#e4f800"},
 {"full_text": " ♪ ${exec amixer get Master | grep -o "\[.*%\]"} ", "color":"\#268BD2"},
 {"full_text": " ☻ [${exec whoami}@${exec hostname}] ", "color":"\#6F3BFF"},
-#{"full_text": " ▲ [${upspeed}] ", "color":"\#ff0000"},
-#{"full_text": " ▼ [${downspeed}] ", "color":"\#00fff2"},
 {"full_text": " || [$membar] ", "color":"\#B58900"},
 {"full_text": " ■ [$cpubar] ", "color":"\#00A9B5"},
 {"full_text": " ☠ [${battery_percent}%] ","color" : "\#00A9B5"},
