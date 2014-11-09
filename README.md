@@ -1,7 +1,15 @@
 i3-config
 ==========
 
-These configuration files are for the popular X11 tilling window manager, i3. 
+These configuration files are for the popular X11 tilling window manager, i3.
+My modifications:
+
+```
+    win_logo - main key
+    win+r - dmenu
+    win+l - screen lock (TODO: special script required)
+    color theme from Arch Linux
+```
 
 File
 ----
