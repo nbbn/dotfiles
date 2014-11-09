@@ -1,6 +1,6 @@
 i3-config
 ==========
-
+![Screenshot](screenshot.png)
 These configuration files are for the popular X11 tilling window manager, i3.
 My modifications:
 
