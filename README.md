@@ -14,9 +14,8 @@ My modifications:
 File
 ----
 
-* .i3/config - the main i3 config file containing key bindings and colours for windows.
-* .i3/conky - the conky config for i3status.
-* .i3/cmus.sh - used to display current cmus track in i3status.
+* .i3/config - the main i3 config file containing key bindings and colours for windows,
+* .i3/conky - the conky config for i3status,
 * .i3/conky-i3bar - to adjust conky output to i3bar
 
 Installation
