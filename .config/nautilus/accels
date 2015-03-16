@@ -1,0 +1,3 @@
+(gtk_accel_path "<Actions>/ExtensionsMenuGroup/TerminalNautilus:OpenFolderLocal" "F4")
+(gtk_accel_path "<Actions>/DirViewActions/Trash" "Delete")
+(gtk_accel_path "<Actions>/DirViewActions/RenameSelectAll" "F2")

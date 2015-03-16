@@ -1,0 +1,75 @@
+.bottom-panel{
+    /* .window-button-icon height +
+       .window-button vertical padding +
+       .window-button > StWidget vertical padding) */
+    font-size:10pt;
+    font-weight: normal!important;
+    height: 2.15em;
+    padding:0em 1em;
+    color: #fff;
+    background-color: black;
+}
+.window-list {
+    spacing: 0.5em; /* place between items on bar */
+}
+
+.window-button > StWidget { /* all windows on bar */
+    padding-top:0.2em;
+    -st-natural-width: 30em;
+    max-width: 30em;
+    border-bottom-width:3px;
+    border-color:#222;
+    border-style: solid;
+}
+
+.window-button.focused > StWidget { /* right now opened, active window */
+    border-bottom-width:3px;
+    border-color:#aaa;
+    border-style: solid;
+}
+
+.window-button.focused:active > StWidget { /* right now opened, active window and clicked */
+}
+
+.window-button:focus > StWidget { /* ??? */
+}
+
+.window-buttom:active > StWidget { /* ??? */
+}
+
+.window-button:hover > StWidget { /* all windows just mouse on it */
+    background-color:#111;
+}
+
+.window-button > StWidget > *:last-child { /* pading for labels */
+    padding-top:0.2em;
+}
+
+.window-button.minimized > StWidget { /* minimized */
+    color:#777;
+}
+.window-button.minimized:active > StWidget { /* minimized and clicked */
+}
+
+
+
+
+.window-button-box {
+    spacing:0.3em; /* space between icon and text */
+}
+.window-button-icon {
+    width: 1.9em;
+    height: 100%;
+}
+
+.window-list-workspace-indicator {
+    width:0px; height:0px;
+}
+
+.window-list-workspace-indicator > StWidget {
+    width:0px;height:0px; border:0px!important;
+}
+
+.notification {
+    font-weight: normal;
+}

@@ -1,28 +1,28 @@
 i3-config
 ==========
-![Screenshot](screenshot.png)
-These configuration files are for the popular X11 tilling window manager, i3.
-My modifications:
+![i3 screenshot](screenshot.png)
+These configuration files are for:
 
-```
-    win_logo - main key
-    win+r - dmenu
-    win+l - screen lock (TODO: special script required)
-    color theme from Arch Linux
-```
+  - i3 (dmenu, i3lock, conky…),
+  - git
+  - byobu
+  - fontconfig
+  - sublime-text
+  - qnapi
+  - gtk3.0
+  - qnapi
+  - redshift
+  - terminator
+  - modified default gnome3 appearance
+  - modified window-list extension for gnome3, not ugly anymore
 
-File
-----
+### window-list modified extension for gnome3 ###
+Gnome 3 has classic mode, that try to looks like Gnome 2. Unfortunately, it uses bright colors, but hey, it's just bunch of extensions for regular Gnome. By default, window-list is ugly, therefore I changed it a little bit to make sleek panel.
 
-* .i3/config - the main i3 config file containing key bindings and colours for windows,
-* .i3/conky - the conky config for i3status,
-* .i3/conky-i3bar - to adjust conky output to i3bar
-
-Installation
-------------
-If you'd like to install this, clone the repo and move everything to the appropriate places. Make sure you have everything that's needed installed.
-
-Credits
--------
-This repo was forked from [here](https://github.com/NorthAntrim/i3-config).
-
+Don't turn on windows grupping, don't use it in Gnome Classic.
+![gnome3 window-list screenshot](window-list-panel.png)
+### i3 ###
+requirements for Debian:
+````
+i3 terminator conky xbacklight xautolock i3lock libnotify-bin x11-utils xfonts-terminus
+````

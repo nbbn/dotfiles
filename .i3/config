@@ -1,11 +1,12 @@
 # i3 config file
 set                            $mod Mod4
-font                           pango:Consolas 9
-bindsym $mod+Return            exec i3-sensible-terminal
+font                           pango:sans 9
 
-bindsym XF86AudioLowerVolume   exec amixer -q set Master 5-
-bindsym XF86AudioRaiseVolume   exec amixer -q set Master 5+
-bindsym XF86AudioMute          exec $(amixer get Master | grep off > /dev/null && amixer -q set Master unmute) || amixer -q set Master mute
+bindsym $mod+Return            exec i3-sensible-terminal -x /usr/bin/fish
+
+bindsym XF86AudioLowerVolume   exec amixer -q -D pulse set Master 5%- unmute
+bindsym XF86AudioRaiseVolume   exec amixer -q -D pulse set Master 5%+ unmute
+bindsym XF86AudioMute          exec $(amixer -c 1 get Master | grep off > /dev/null && amixer -q -D pulse set Master unmute) || amixer -q -D pulse set Master mute
 bindsym XF86MonBrightnessDown  exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp    exec xbacklight -inc 10
 bindsym Print                  exec scrot
@@ -16,12 +17,8 @@ floating_modifier             $mod
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+r exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# start dmenu
+bindsym $mod+r exec dmenu_run -fn '-*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-13' -f -i
 
 # change focus
 bindsym $mod+j focus left
@@ -80,10 +77,10 @@ bindsym $mod+3 workspace 3 tty
 bindsym $mod+4 workspace 4 ssh
 bindsym $mod+5 workspace 5 expl
 bindsym $mod+6 workspace 6 mail
-bindsym $mod+7 workspace 7 music
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9 other
-bindsym $mod+0 workspace 10
+bindsym $mod+7 workspace 7 mocp
+bindsym $mod+8 workspace 8 vms
+bindsym $mod+9 workspace 9 vpn
+bindsym $mod+0 workspace 10 other
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1 www
@@ -92,18 +89,22 @@ bindsym $mod+Shift+3 move container to workspace 3 tty
 bindsym $mod+Shift+4 move container to workspace 4 ssh
 bindsym $mod+Shift+5 move container to workspace 5 expl
 bindsym $mod+Shift+6 move container to workspace 6 mail
-bindsym $mod+Shift+7 move container to workspace 7 music
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9 other
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+7 move container to workspace 7 mocp
+bindsym $mod+Shift+8 move container to workspace 8 vms
+bindsym $mod+Shift+9 move container to workspace 9 vpn
+bindsym $mod+Shift+0 move container to workspace 10 other
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+# lock screen
 bindsym $mod+l exec "i3exit lock"
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# switch user
+bindsym $mod+Shift+e exec "i3exit switch"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -130,13 +131,13 @@ mode "resize" {
 
 bindsym $mod+Ctrl+r mode "resize"
 
-# Start i3bar to display a workspace bar (p
+# Start i3bar to display a workspace bar
 bar {
 status_command         ~/.i3/conky-i3bar
   strip_workspace_numbers no
   position               bottom
   workspace_buttons      yes
-  font                   pango:Consolas 9
+  font                   pango:sans 9
   colors {
     separator            #666666
     background           #222222
@@ -150,11 +151,14 @@ status_command         ~/.i3/conky-i3bar
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+
 # ArchLinux colors
 client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
 
-exec --no-startup-id xset dpms 300
-exec --no-startup-id xautolock -time 4 -locker "i3lock -c 191919 -t -e" &
+
+exec --no-startup-id xset dpms 300 &
+exec --no-startup-id xautolock -time 1 -locker "i3lock -c 191919 -t -e" -secure -nowlocker "i3lock -c 191919 -t -e" -notifier "~/.i3/notify.sh" -notify 3 &
+exec --no-startup-id ~/scripts/start &
