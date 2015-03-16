@@ -4,8 +4,8 @@ font                           pango:sans 9
 
 bindsym $mod+Return            exec i3-sensible-terminal -x /usr/bin/fish
 
-bindsym XF86AudioLowerVolume   exec amixer -q -D pulse set Master 5%- unmute
-bindsym XF86AudioRaiseVolume   exec amixer -q -D pulse set Master 5%+ unmute
+bindsym XF86AudioLowerVolume   exec amixer -q -D pulse set Master 5%-
+bindsym XF86AudioRaiseVolume   exec amixer -q -D pulse set Master 5%+
 bindsym XF86AudioMute          exec $(amixer -c 1 get Master | grep off > /dev/null && amixer -q -D pulse set Master unmute) || amixer -q -D pulse set Master mute
 bindsym XF86MonBrightnessDown  exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp    exec xbacklight -inc 10
